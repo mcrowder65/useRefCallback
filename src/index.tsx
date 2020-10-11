@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./app"
-import Providers from "./providers"
+import App from "src/app"
+import Providers from "src/providers"
 
 ReactDOM.render(
   <React.StrictMode>

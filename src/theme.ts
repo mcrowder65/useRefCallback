@@ -5,3 +5,9 @@ const theme = {
 }
 
 export default theme
+
+export type Theme = {
+  palette: {
+    primary: string
+  }
+}

@@ -1,9 +1,10 @@
 import React from "react"
-import ExampleButton from "src/components/example-button"
+import ExampleButton from "./components/example-button"
+
 function App() {
   return (
     <div>
-      <ExampleButton label="Button" />
+      <ExampleButton label="Example" />
     </div>
   )
 }
