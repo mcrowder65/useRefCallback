@@ -1,10 +1,11 @@
-const { override, addBabelPlugin, disableEsLint } = require("customize-cra")
+const { override, addBabelPlugin, disableEsLint,addBundleVisualizer } = require("customize-cra")
 const { addReactRefresh } = require("customize-cra-react-refresh")
 
 let config = override(
   disableEsLint(),
   addBabelPlugin("babel-plugin-emotion"),
   addReactRefresh(),
+  process.env.ANALYZE && addBundleVisualizer(),
 )
 
 /*eslint-disable no-param-reassign */
