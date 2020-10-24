@@ -1,10 +1,10 @@
 import React from "react"
-import ExampleButton from "./components/example-button"
+import TextField from "src/components/text-field"
 
 function App() {
   return (
     <div>
-      <ExampleButton label="Example" />
+      <TextField />
     </div>
   )
 }
