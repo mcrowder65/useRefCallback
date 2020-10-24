@@ -56,8 +56,8 @@
     "test": "yarn lint && yarn jest && yarn build && yarn chromatic",
     "eject": "react-app-rewired eject",
     "storybook:server": "start-storybook -p 6006 -s public",
-    "storybook:build": "build-storybook -s public",
-    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "chromatic --project-token $CHROMATIC_PROJECT_TOKEN"
   },
   "browserslist": {
     "production": [
