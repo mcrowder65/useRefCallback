@@ -1,7 +1,13 @@
 module.exports = {
-  extends: ["mcrowder65", "plugin:import/typescript"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  extends: ["mcrowder65"],
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
+  },
+  plugins: [],
   settings: {
     "import/resolver": {
       node: {
@@ -10,8 +16,9 @@ module.exports = {
     },
   },
   rules: {
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": "error",
+    "no-console": "error",
+    "no-param-reassign": "off",
+    "no-use-before-define": "error",
     "no-shadow": "off",
   },
 }
