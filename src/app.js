@@ -1,23 +1,14 @@
 import React from "react"
-import TextField from "src/components/text-field"
 import styled from "@emotion/styled"
-const Button = styled.button`
-  background: blue;
-`
-const Container = styled.div`
-  ${Button} {
-    background: orange;
-  }
-`
+import useEventListener from "src/hooks/use-event-listener"
 function App() {
+  const [resizeCount, setResizeCount] = React.useState(0)
+  useEventListener("resize", () => {
+    setResizeCount((prev) => prev + 1)
+  })
   return (
     <div>
-      <p>i am the app</p>
-      <TextField />
-      <Button>outside</Button>
-      <Container>
-        <Button>Inside</Button>
-      </Container>
+      <p>Resized: {String(resizeCount)}</p>
     </div>
   )
 }
