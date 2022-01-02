@@ -1,10 +1,12 @@
 import React from "react"
-import useEventListener from "src/hooks/use-event-listener"
+import Providers from "src/providers"
+import Routes from "src/routes"
 function App() {
-  useEventListener("resize", () => {
-    console.log("hello")
-  })
-  return <div>I am app</div>
+  return (
+    <Providers>
+      <Routes />
+    </Providers>
+  )
 }
 
 export default App
