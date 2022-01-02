@@ -1,5 +1,15 @@
 import React from "react"
-import useEventListener from "src/hooks/use-event-listener"
+const useEventListener = (type, callback) => {
+  React.useEffect(() => {
+    console.log("subscribe")
+    window.addEventListener(type, callback)
+    return () => {
+      console.log("unsubscribe")
+      window.removeEventListener(type, callback)
+    }
+  }, [type, callback])
+}
+
 function Simple() {
   useEventListener("resize", () => {
     console.log("hello")
