@@ -6,7 +6,7 @@ const useEventListener = (type, callback) => {
     return () => {
       window.removeEventListener(type, callback)
     }
-  }, [])
+  }, [type, callback])
 }
 
 export default useEventListener
