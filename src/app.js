@@ -1,16 +1,10 @@
 import React from "react"
-import styled from "@emotion/styled"
 import useEventListener from "src/hooks/use-event-listener"
 function App() {
-  const [resizeCount, setResizeCount] = React.useState(0)
   useEventListener("resize", () => {
-    setResizeCount((prev) => prev + 1)
+    console.log("hello")
   })
-  return (
-    <div>
-      <p>Resized: {String(resizeCount)}</p>
-    </div>
-  )
+  return <div>I am app</div>
 }
 
 export default App
