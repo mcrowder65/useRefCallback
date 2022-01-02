@@ -6907,10 +6907,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-mcrowder65@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-4.0.0.tgz#24a94e9fe2cff1013af2b97a3d90adecc9d36c3f"
-  integrity sha512-KIe1oPWTVQswFMsQiAGTG+nHyBAPkFxka1Ntkd1s2uXWhBCikxQiMYZHBI1FYLestwxk8qDRMzy3oBH7+iqJpA==
+eslint-config-mcrowder65@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-4.0.1.tgz#db92dc5c59abb05e5d51d119edb794973a8560de"
+  integrity sha512-0JdYUyach2+8SsIHcqoMY4pIHBYPhZaTlso0L43LTPdfXZxbHgfTRaM1mI2T+rxpvXaIb3YsSnmZOykY4OBx9g==
   dependencies:
     "@babel/eslint-parser" "7.16.5"
     eslint "8.5.0"
@@ -6921,6 +6921,7 @@ eslint-config-mcrowder65@4.0.0:
     eslint-plugin-import "2.25.3"
     eslint-plugin-jest "25.3.3"
     eslint-plugin-react "7.28.0"
+    eslint-plugin-react-hooks "4.3.0"
     eslint-plugin-react-native "4.0.0"
     prettier "2.5.1"
 
@@ -7052,7 +7053,7 @@ eslint-plugin-jsx-a11y@^6.5.1:
     language-tags "^1.0.5"
     minimatch "^3.0.4"
 
-eslint-plugin-react-hooks@^4.3.0:
+eslint-plugin-react-hooks@4.3.0, eslint-plugin-react-hooks@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
   integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
