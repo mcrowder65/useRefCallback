@@ -1,21 +1,21 @@
 import React from "react"
 const useEventListener = (type, callback) => {
-  const refCallback = React.useRef(null)
+  const callbackRef = React.useRef(null)
 
   React.useEffect(() => {
     console.log("assigning callback to refCallback")
-    refCallback.current = callback
+    callbackRef.current = callback
   }, [callback])
   React.useEffect(() => {
     console.log("subscribe")
-    window.addEventListener(type, refCallback.current)
+    window.addEventListener(type, callbackRef.current)
     return () => {
       console.log("unsubscribe")
-      window.removeEventListener(type, refCallback.current)
+      window.removeEventListener(type, callbackRef.current)
     }
   }, [type])
 }
-function RefCallback() {
+function CallbackRef() {
   const [count, setCount] = React.useState(0)
   useEventListener("resize", () => {
     setCount((prev) => prev + 1)
@@ -28,4 +28,4 @@ function RefCallback() {
   )
 }
 
-export default RefCallback
+export default CallbackRef

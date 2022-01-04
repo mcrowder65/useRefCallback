@@ -2,7 +2,7 @@ import React from "react"
 import { Route, Switch } from "react-router-dom"
 import Simple from "src/pages/simple"
 import ExternalExample from "src/pages/external-example"
-import RefCallback from "src/pages/ref-callback"
+import CallbackRef from "src/pages/callback-ref"
 
 const Routes = () => {
   return (
@@ -10,7 +10,7 @@ const Routes = () => {
       <Route path="/" component={() => <div>root</div>} exact />
       <Route path="/simple" component={Simple} exact />
       <Route path="/external" component={ExternalExample} exact />
-      <Route path="/ref-callback" component={RefCallback} exact />
+      <Route path="/callback-ref" component={CallbackRef} exact />
     </Switch>
   )
 }
