@@ -3,6 +3,7 @@ const useCallbackRef = (callback) => {
   const callbackRef = React.useRef(null)
 
   React.useEffect(() => {
+    console.log("assigning callback to refCallback")
     callbackRef.current = callback
   }, [callback])
   return callbackRef
@@ -11,8 +12,10 @@ const useEventListener = (type, callback) => {
   const callbackRef = useCallbackRef(callback)
   React.useEffect(() => {
     let callback = callbackRef.current
+    console.log("subscribe")
     window.addEventListener(type, callback)
     return () => {
+      console.log("unsubscribe")
       window.removeEventListener(type, callback)
     }
   }, [type])
